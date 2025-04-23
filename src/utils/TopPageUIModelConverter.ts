@@ -11,10 +11,10 @@ import { LocationResponse } from "../responses/LocationResponse";
 import { extractTimeOnly } from "../utils/TimeUtils";
 import { escape } from "querystring";
 
-const bgSunnyImagePath = "src/assets/backgroundimages/bg-sunny.png";
-const bgCloudyImagePath = "src/assets/backgroundimages/bg-cloudy.png";
-const bgRainyImagePath = "src/assets/backgroundimages/bg-rainy.png";
-const bgSnowImagePath = "src/assets/backgroundimages/bg-snow.png";
+const bgSunnyImagePath = "/assets/backgroundimages/bg-sunny.png";
+const bgCloudyImagePath = "/assets/backgroundimages/bg-cloudy.png";
+const bgRainyImagePath = "/assets/backgroundimages/bg-rainy.png";
+const bgSnowImagePath = "/assets/backgroundimages/bg-snow.png";
 
 const weatherCodeToBackgroundImage = (code: number): string => {
   const weatherMap: { [key: number]: string } = {
@@ -76,13 +76,13 @@ const weatherCodeToWeather = (code: number): string => {
   return weatherMap[code] || "Unknown";
 };
 
-const iconCloudyImagePath = "src/assets/icons/weather-cloudy.svg";
-const iconFogImagePath = "src/assets/icons/weather-fog.svg";
-const iconPartlyCloudyImagePath = "src/assets/icons/weather-partly cloudy.svg";
-const iconRainImagePath = "src/assets/icons/weather-rain.svg";
-const iconSnowImagePath = "src/assets/icons/weather-snow.svg";
-const iconSunnyImagePath = "src/assets/icons/weather-sunny.svg";
-const iconThunderstormImagePath = "src/assets/icons/weather-thunderstorm.svg";
+const iconCloudyImagePath = "/assets/icons/weather-cloudy.svg";
+const iconFogImagePath = "/assets/icons/weather-fog.svg";
+const iconPartlyCloudyImagePath = "/assets/icons/weather-partly cloudy.svg";
+const iconRainImagePath = "/assets/icons/weather-rain.svg";
+const iconSnowImagePath = "/assets/icons/weather-snow.svg";
+const iconSunnyImagePath = "/assets/icons/weather-sunny.svg";
+const iconThunderstormImagePath = "/assets/icons/weather-thunderstorm.svg";
 
 const weatherCodeToIconImage = (code: number): string => {
   const weatherMap: { [key: number]: string } = {
