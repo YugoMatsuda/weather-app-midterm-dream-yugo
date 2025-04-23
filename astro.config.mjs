@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   srcDir: './src',
@@ -23,8 +24,5 @@ export default defineConfig({
   },
 
   output: 'server',
-  adapter: {
-    name: 'astro-default',
-    hooks: {}
-  }
+  adapter: vercel()
 }); 
